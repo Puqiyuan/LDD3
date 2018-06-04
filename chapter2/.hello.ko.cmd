@@ -1,1 +1,0 @@
-cmd_/home/pqy/LDD3/chapter2/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/pqy/LDD3/chapter2/hello.ko /home/pqy/LDD3/chapter2/hello.o /home/pqy/LDD3/chapter2/hello.mod.o ;  true
