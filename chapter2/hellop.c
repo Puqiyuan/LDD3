@@ -1,5 +1,7 @@
 #include <linux/init.h>
 #include <linux/module.h>
+#include <linux/moduleparam.h>
+
 MODULE_LICENSE("Dual BSD/GPL");
 
 static char *whom = "world";
@@ -9,7 +11,9 @@ module_param(whom, charp, S_IRUGO);
 
 static int hello_init(void)
 {
-	printk(KERN_ALERT "Hello, world\n");
+	int i;
+	for (i = 0; i < howmany; i++)
+		printk(KERN_ALERT "(%d) Hello, %s\n", i, whom);
 	return 0;
 }
 
