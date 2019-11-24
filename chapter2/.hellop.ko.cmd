@@ -1,0 +1,1 @@
+cmd_/home/pqy7172/LDD3/chapter2/hellop.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-4.18.0-1-common/scripts/module-common.lds  --build-id  -o /home/pqy7172/LDD3/chapter2/hellop.ko /home/pqy7172/LDD3/chapter2/hellop.o /home/pqy7172/LDD3/chapter2/hellop.mod.o ;  true
