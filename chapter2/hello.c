@@ -1,6 +1,7 @@
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/sched.h>
+#include <linux/version.h>
 MODULE_LICENSE("Dual BSD/GPL");
 
 static char *whom = "world";
@@ -12,6 +13,8 @@ static int hello_init(void)
 {
 	printk(KERN_ALERT "Hello, world\n");
 	printk(KERN_INFO "The process is \"%s\" (pid %i)\n", current->comm, current->pid);
+	printk(KERN_ALERT "%d\n", LINUX_VERSION_CODE);
+	printk(KERN_ALERT "%d\n", KERNEL_VERSION(4, 18, 6));
 	return 0;
 }
 
